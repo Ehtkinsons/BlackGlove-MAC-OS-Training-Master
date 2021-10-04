@@ -1,14 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
+  <title>Lesson 15: FileVault Disk Encryption</title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2022.6">
   <style type="text/css">
   </style>
 </head>
 <body>
+  <center>
+  <h1>Lesson 15: FileVault Disk Encryption</h1>
+  <h3>"Why Encrypt?"</h3>
+    <ul>
+      <li>"FileVault is a disk encryption program which comes pre-installed with Mac OS X Big Sur."</li>
+      <li>"Disk encryption is important to secure the data you have on your hard disk from unauthorized viewing from third parties, such as hackers or those who may have access to your computer physically."</li>
+      <li>"Other security methods, such as two-factor authentication, passwords, antivirus, and firwealls are designed to protect against logic-based (code-executed) attacks, not physical ones."</li>
+      <li>"Theft can be considered a data breach in and of itself for any device, not just limited to laptops, as they have access to your physical storage medium."</li>
+    </ul>
+    <h3>"FileVault Intro & Setup"</h3>
+    <ul>
+        <li>FileVault is a full-disk encryption software.</li>
+        <li>We are currently on FileVault version 2.
+        <li>It is not activated by default.</li>
+        <li>There are two types of Data we're concerned about in network security, Data in Motion, and Data at Rest.</li>
+        <li>You can encrypt entire disks, or just folders in Mac OS. Apple also gave the option to just encrypt the home directory in the original release of FileVault. This complicated things, as programs would store essential information in unencrypted directories by default.</ls>
+        <li>To access and further check and see if FileVault is on, you'll want to go to System Preferences -> Security and Privacy -> then click the Firewall tab. </li>
+        <li>To edit, click the lock on the settings menu as an admin user and enter your password.</li>
+        <li>You will be given the option either to allow for an iCloud reset to unencrypt your drive if you forget your password, or create a 24 character recovery key which should be written down and secured.</li>
+        <li>If you lose the Recovery Key, you will have to disable then re-enable FileVault in order to get a new one.</li>
+        <li>Initial encryption times depend on the size & data amount of your drive.</li>
+    </ul>
+    <h3>"Technical Details & Security"</h3>
+    <ul>
+        <li>Technical Info located at the <a href="https://support.apple.com/en-us/HT204837"> Apple Spport Website.</a></li>
+        <li>FileVault 2 full-disk uses XTS-AES-128 encryption with a 256-bit key (the one you write down).</li>
+        <li>Quantum Computing may threaten this, so expect 512-bit keys in the future.</li>
+        <li>While easy by default to format and reset a Mac's hardware for resale, iOS and iPadOS devices are much more locked down due to the iCloud requirements present on the device. A device will not activate, format, nor reset completely without an iCloud password confirmation.</li>
+        <li>Similarly to this, on Macs, you can enable a firmware password to block access to the OS, making unauthorized users unable to reset the device without going to an Apple Store.
+  </center>
 </body>
 </html>
