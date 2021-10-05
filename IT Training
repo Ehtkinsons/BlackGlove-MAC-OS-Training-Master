@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Apple Deployment</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+  </style>
+  <center>
+      <img src="logo.png" width="500" height="150">
+  <h1>Apple Deployment Notes</h1>
+  <p>11 Hour 45 Minute course featuring articles meant to familiarize you with the Apple suite and MDM Deployment/Management.</p>
+</center>
+</head>
+<body>
+<h2><i>Directory</i></h2>
+<div class="directory">
+<h3><a href = "Chapter 1.html">Chapter 1</a></h3>
+<h3><a href = "Chapter 2.html">Chapter 2</a></h3>
+<h3><a href = "Chapter 3.html">Chapter 3</a></h3>
+<h3><a href = "Chapter 4.html">Chapter 4</a></h3>
+<h3><a href = "Chapter 5.html">Chapter 5</a></h3>
+<h3><a href = "Chapter 6.html">Chapter 6</a></h3>
+<h3><a href = "Chapter 7.html">Chapter 7</a></h3>
+<h3><a href = "Chapter 8.html">Chapter 8</a></h3>
+<h3><a href = "Chapter 9.html">Chapter 9</a></h3>
+<h3><a href = "Chapter 10.html">Chapter 10</a></h3>
+<h3><a href = "Chapter 11.html">Chapter 11</a></h3>
+<h3><a href = "Chapter 12.html">Chapter 12</a></h3>
+<h3><a href = "Chapter 13.html">Chapter 13</a></h3>
+<h3><a href = "Chapter 14.html">Chapter 14</a></h3>
+<h3><a href = "Chapter 15.html">Chapter 15</a></h3>
+<h3><a href = "Chapter 16.html">Chapter 16</a></h3>
+<h3><a href = "Chapter 17.html">Chapter 17</a></h3>
+<h3><a href = "Chapter 18.html">Chapter 18</a></h3>
+<h3><a href = "Chapter 19.html">Chapter 19</a></h3>
+<h3><a href = "Chapter 20.html">Chapter 20</a></h3>
+<h3><a href = "Chapter 21.html">Chapter 21</a></h3>
+<h3><a href = "Chapter 22.html">Chapter 22</a></h3>
+<h3><a href = "Chapter 23.html">Chapter 23</a></h3>
+</div>
+</body>
+</html>
