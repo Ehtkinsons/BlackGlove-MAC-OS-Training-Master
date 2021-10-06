@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <center>
+    <link rel = "icon"
+          href = "image/png"
+          href = "favicon.png"
+          />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Lesson 15: FileVault Disk Encryption</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+</center>
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+  <center>
+    <img src="favicon.png" width="150" height="150">
+  <h1>Lesson 16: Archives and disk images.</h1>
+  <!-- How to create and extract files :))
+
+Archives are compressed files.
+Images are copies of disks, whether they be OSes or software.
+
+To create these, software exists in the OS to compress files and create archives/disk images.
+
+
+
+  -->
+  </body>
+  </html>
