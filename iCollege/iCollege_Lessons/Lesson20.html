@@ -1,0 +1,62 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="hidden-files">Hidden Files</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the function of hidden files and folders in macOS.</li>
+<li>Utilize chflags and the hidden flag to hide a file or folder.</li>
+<li>Utilize UNIX-style hidden files and folders. </li>
+<li>Navigate to hidden resources in the macOS file system. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Hidden System Folders<ul>
+<li>Many files/folders are hidden from the end users</li>
+<li>Not needed by the average user</li>
+<li>Hidden for convenience and protection</li>
+<li>Example<ul>
+<li>Each user has a <code>Library</code> folder</li>
+<li><code>/User/dpezet/Library</code></li>
+<li>Contains user settings and system data</li>
+<li>Hidden by default</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Using the <em>hidden</em> flag<ul>
+<li><code>chflags hidden ~/file.txt</code></li>
+<li><code>chflags nohidden ~/file.txt</code></li>
+<li>Hidden from Finder only</li>
+</ul>
+</li>
+<li>Hiding a folder<ul>
+<li><code>chflags hidden /User/dpezet/Test</code></li>
+</ul>
+</li>
+<li>UNIX-style hidden files and folders<ul>
+<li>File name is preceded with a <code>.</code></li>
+<li>e.g. <code>/User/dpezet/.ssh/</code></li>
+<li>Hidden from Finder and Terminal</li>
+</ul>
+</li>
+<li>Accessing Hidden folders<ul>
+<li>Some are listed in Finder <code>Go</code> menu<ul>
+<li>Hold <code>Option</code> to see <code>Library</code> in the menu</li>
+</ul>
+</li>
+<li>Otherwise, <code>Go -&gt; Go to Other Folder</code> and manually type path</li>
+</ul>
+</li>
+<li>Hidden Root Folders<ul>
+<li>For most users, their file system rotates around their home directory</li>
+<li>There are numerous hidden system folders also</li>
+<li><code>ls -la /</code></li>
+</ul>
+</li>
+</ul>
+</body></html>

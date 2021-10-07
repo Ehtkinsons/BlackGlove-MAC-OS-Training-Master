@@ -1,0 +1,118 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="special-file-permissions">Special File Permissions</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>View and modify UNIX-style permissions from the terminal. </li>
+<li>View and modify macOS ACL permissions from the terminal. </li>
+<li>Describe the metadata and the AppleDouble metadata file structure. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>List permissions<ul>
+<li><code>ls -l &lt;directory&gt;</code></li>
+</ul>
+</li>
+<li>Modifying Permissions<ul>
+<li>Modify permissions: <code>chmod &lt;permissions&gt; &lt;directory&gt;</code></li>
+<li>Example #1<ul>
+<li><code>chmod g+w ./file.txt</code></li>
+<li>Adds write permissions to the group</li>
+</ul>
+</li>
+<li>Example #2<ul>
+<li><code>chmod go-r ./file.txt</code></li>
+<li>Removes read permissions from group and other</li>
+</ul>
+</li>
+<li>Example #3<ul>
+<li><code>chmod -R go+r ./tmp</code></li>
+<li>Adds read access for group and other for ./tmp and all files/folders within it</li>
+<li>Recursive</li>
+</ul>
+</li>
+<li>Example #4<ul>
+<li><code>chmod u=rwx,go=rx ./script.sh</code></li>
+<li>Grants read/write/execute permissions to the file owner</li>
+<li>Grants read/execute permissions to the group and everyone else</li>
+</ul>
+</li>
+<li>Example #5<ul>
+<li><code>chmod +r ./file.txt</code></li>
+<li>Grants read permissions to everyone for the file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Changing the owner/group<ul>
+<li><code>chown &lt;owner&gt;:&lt;group&gt; file.txt</code></li>
+<li><code>chown donpezet:admin secret.txt</code></li>
+<li>To modify a folder and all child objects, use -R</li>
+<li><code>chown -R donpezet:staff /Users/donpezet/Music</code></li>
+</ul>
+</li>
+<li>Access Control Lists<ul>
+<li>View extended permissions (ACLs)<ul>
+<li><code>ls -le</code></li>
+</ul>
+</li>
+<li>Add permissions<ul>
+<li><code>chmod +a &quot;username allow read,write&quot; file.txt</code></li>
+</ul>
+</li>
+<li>Remove permissions<ul>
+<li><code>chmod -a &quot;username allow read,write&quot; file.txt</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>File Metadata<ul>
+<li>Additional information about a file</li>
+<li>Some file formats can store it internally<ul>
+<li>PDF</li>
+<li>MP3</li>
+<li>MP4</li>
+<li>PNG</li>
+<li>GIF</li>
+</ul>
+</li>
+<li>Apple can store the metadata externally also</li>
+<li>Spotlight searches are able to find files based on 
+metadata</li>
+<li>Use <em>Get Info</em> on a file to view its metadata</li>
+<li>For files stored on a Mac OS Extended Volume the 
+metadata is stored in extended file attributes</li>
+<li>Use <code>ls -l@</code> in the terminal to view them</li>
+</ul>
+</li>
+<li>AppleDouble Metadata<ul>
+<li>For files stored on FAT/ExFAT Volumes, the metadata is stored in a separate file.</li>
+<li>Separate file is referred to as AppleDouble Metadata</li>
+<li>Example</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Original File Name</th>
+<th>Metadata File Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File1.txt</td>
+<td>._File1.txt</td>
+</tr>
+<tr>
+<td>Instrucions.pdf</td>
+<td>._Instructions.pdf</td>
+</tr>
+</tbody>
+</table>
+</body></html>

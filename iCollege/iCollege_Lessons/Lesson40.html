@@ -1,0 +1,63 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="backing-up-with-time-machine">Backing Up with Time Machine</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Configure Time Machine to backup a computer running macOS.</li>
+<li>Verify a backup completed successfully.</li>
+<li>Describe the supported destinations for a Time Machine backup. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Time Machine<ul>
+<li>Easy to use backup system</li>
+<li>Provides ongoing backups to another disk</li>
+<li>By default backs up every hour<ul>
+<li>If a removable disk is used, it must be present</li>
+<li>Changed files are tracked and backed up on schedule</li>
+<li>Only changed files are copied</li>
+<li>The entire file is copied<ul>
+<li>That is a problem for large files, as each copy is maintained</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Backups are stored as a large series of hard links to unchanged files alongside the changed files</li>
+<li>When space runs out, oldest backups are deleted</li>
+<li>The larger the backup drive, the further back you can restore</li>
+</ul>
+</li>
+<li>Hardware Requirements<ul>
+<li>Can back up to any disk other than the system volume</li>
+<li>A secondary disk is recommended</li>
+</ul>
+</li>
+<li>Time Machine Encryption<ul>
+<li>Can be encrypted</li>
+<li>DEMO: Enabling Time Machine with Encryption</li>
+</ul>
+</li>
+<li>Local Snapshots<ul>
+<li>A local backup cache is kept</li>
+<li>Called a local snapshot</li>
+<li>Enabled by default</li>
+<li>Can be viewed in terminal<ul>
+<li>Terminal needs &quot;Full Disk Access&quot; permissions</li>
+<li><code>sudo tmutil listbackups</code></li>
+<li><code>sudo tmutil listlocalsnapshots /Volumes/Macintosh\ HD</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Network Backups<ul>
+<li>Backup to a network share hosted on a macOS server or Time Capsule WAP</li>
+<li>DEMO: Network Backup</li>
+</ul>
+</li>
+</ul>
+</body></html>

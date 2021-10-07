@@ -1,0 +1,87 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="user-account-security">User Account Security</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Delete a user and their home directory from macOS.</li>
+<li>Describe the methods of restoring a user account or its home directory. </li>
+<li>Describe the methods available for resetting a user&#39;s password. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Deleting a User Account<ul>
+<li><code>Apple Menu</code> -&gt; <code>System Preferences</code> -&gt; <code>Users &amp; Groups</code></li>
+<li>Select the user and click on <code>-</code></li>
+<li>Three options<ol>
+<li>Save the home folder in a disk image<ul>
+<li>User account is deleted and the contents of their home folder are stored in a .dmg file in <code>/Users/Deleted Users/</code></li>
+</ul>
+</li>
+<li>Don&#39;t change the home folder<ul>
+<li>The user account is deleted, but their home folder is left in place</li>
+<li><code>(Deleted)</code> is added to the end of the folder name</li>
+</ul>
+</li>
+<li>Delete the home folder<ul>
+<li>Home folder is deleted, bypassing the trash bin</li>
+<li>&quot;Erase home folder securely&quot; provides a data scrub to help prevent file recovery with 3rd party tools</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Restoring a deleted user<ul>
+<li>There is no direct way to recover a user account</li>
+<li>If the home folder was not backed up, just create a new account</li>
+<li>If the home folder was backed up, follow these steps:<ol>
+<li>Restore the home folder to the <code>/Users/</code> directory</li>
+<li>Create a new user account with the same name</li>
+<li>When you click &quot;Create&quot; you will be prompted to use the existing home folder</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>User Passwords<ul>
+<li>Users can change their password themselves<ul>
+<li><code>Apple Menu</code> -&gt; <code>System Preferences</code> -&gt; <code>Security &amp; Privacy</code> -&gt; <code>General</code></li>
+</ul>
+</li>
+<li>An administrator can reset anyone&#39;s passwords<ul>
+<li><code>Apple Menu</code> -&gt; <code>System Preferences</code> -&gt; <code>Users &amp; Groups</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Reseting the Administrator&#39;s Password<ul>
+<li>If FileVault is not enabled<ol>
+<li>Boot to Recovery</li>
+<li><code>Utilities -&gt; Terminal</code></li>
+<li><code>resetpassword</code></li>
+</ol>
+</li>
+<li>If FileVault is enabled<ul>
+<li>iCloud password reset</li>
+</ul>
+</li>
+<li>Otherwise<ul>
+<li>Format and reinstall</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Keychains<ul>
+<li>Encrypted database that stores user passwords for easy/automated recall</li>
+<li>Resetting a user&#39;s password does not update their keychain</li>
+<li>User will be prompted to automatically repair their keychain the first time they login after a password change</li>
+<li>A new Keychain will be generated</li>
+<li>The old keychain is saved, but will be inaccessible unless the old password can be retrieved</li>
+</ul>
+</li>
+</ul>
+</body></html>

@@ -1,0 +1,133 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="troubleshooting-peripherals">Troubleshooting Peripherals</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the types of peripherals supported by macOS and their connection types. </li>
+<li>Describe kernel extensions and their functions.</li>
+<li>Verify the presence of drivers and kernel extensions in macOS. </li>
+<li>Troubleshoot hardware that is not detected by macOS. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Supported Devices<ul>
+<li>Storage</li>
+<li>Imaging devices</li>
+<li>Input devices<ul>
+<li>Keyboards</li>
+<li>Mice</li>
+</ul>
+</li>
+<li>Output devices<ul>
+<li>Displays</li>
+</ul>
+</li>
+<li>Communications devices<ul>
+<li>Modems</li>
+<li>Network cards</li>
+</ul>
+</li>
+<li>Many more</li>
+</ul>
+</li>
+<li>Bluetooth<ul>
+<li>Short range wireless technology</li>
+<li>Up to 10m</li>
+<li>Bluetooth 3.0 up to 24Mbps</li>
+<li>Bluetooth 4.0 / Bluetooth Low Energy (BLE)<ul>
+<li>Normally in addition to Bluetooth 3.0</li>
+<li>Provides rapid connection time</li>
+<li>Low energy</li>
+<li>Up to 200Kbps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Serial ATA<ul>
+<li>Serial Advanced Technology Attachment (SATA)</li>
+<li>Used in all current Macs</li>
+<li>Only one drive per channel</li>
+<li>Speeds up to 600MBps</li>
+</ul>
+</li>
+<li>FireWire<ul>
+<li>Also called IEEE 1394</li>
+<li>Up to 63 devices per controller</li>
+<li>Provides 2.5 watts of power</li>
+<li>FireWire 400 up to 400Mbps</li>
+<li>FireWire 800 up to 800Mbps</li>
+</ul>
+</li>
+<li>USB<ul>
+<li>Up to 127 devices per controller</li>
+<li>Provides 7 watts of power</li>
+<li>USB 1.1 up to 1.5Mbps</li>
+<li>USB 2.0 up to 480Mbps</li>
+<li>USB 3.1 up to 5Gbps (5,000Mbps)</li>
+</ul>
+</li>
+<li>Thunderbolt<ul>
+<li>Current devices ship with Thunderbolt 3</li>
+<li>Compatible with USB-C/DisplayPort</li>
+<li>Supports daisy-chaining up to 7 devices<ul>
+<li>Devices must have two Thunderbolt ports to support daisy-chaining</li>
+</ul>
+</li>
+<li>Thunderbolt 1 up to 10Gbps per channel (2 channels)</li>
+<li>Thunderbolt 2 up to 20Gbps</li>
+<li>Thunderbolt 3 up to 40Gbps (USB-C)</li>
+</ul>
+</li>
+<li>Drivers may be necessary for some devices<ul>
+<li>In macOS, drivers come in three forms<ol>
+<li>Framework Plugins<ul>
+<li>Hardware support is connected to an underlying framework</li>
+<li>For example, OpenGL drivers</li>
+</ul>
+</li>
+<li>Applications<ul>
+<li>Hardware support is provided by an app</li>
+<li>For example, iTunes</li>
+</ul>
+</li>
+<li>Kernel Extensions<ul>
+<li>Most drivers are loaded this way</li>
+<li>Dynamically loaded</li>
+<li><code>/Library/Extensions</code></li>
+<li><code>/Library/StagedExtensions</code></li>
+<li><code>/Library/DriverExtensions</code></li>
+<li><code>/System/Library/Extensions</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Viewing active extensions on an M1 Mac<ul>
+<li><code>systemextensionsctl list</code></li>
+</ul>
+</li>
+<li>Drivers come in 32bit and 64bit<ul>
+<li>macOS Big Sur is 64bit</li>
+<li><em>System Information</em> shows which version you have</li>
+<li><code>System Information -&gt; Software -&gt; Extensions</code></li>
+<li>x86_64 = 64bit </li>
+</ul>
+</li>
+<li>See which devices are attached using <em>System Information</em><ul>
+<li><code>System Information -&gt; Hardware -&gt; &lt;bus&gt;</code></li>
+</ul>
+</li>
+<li>Apple Hardware Test<ul>
+<li>Hold <strong>D</strong> while booting</li>
+<li>Launches the hardware test from BootROM</li>
+<li>Holding <strong>Command-Option-D</strong> runs from Internet</li>
+</ul>
+</li>
+</ul>
+</body></html>

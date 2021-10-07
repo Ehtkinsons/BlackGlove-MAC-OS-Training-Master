@@ -1,0 +1,90 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="file-and-folder-sharing">File and Folder Sharing</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe file and printer sharing in macOS 11. </li>
+<li>Make a folder or printer available for access on a network. </li>
+<li>Describe alternative resource sharing protocols supported by macOS. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Printer Sharing</li>
+<li>File Sharing<ul>
+<li>Allows sharing files/folders with other users on the network</li>
+<li>Shared contents are linked to the /Network path</li>
+<li>Separate links are maintained because share permissions may differ from disk permissions</li>
+</ul>
+</li>
+<li>Several different ways<ul>
+<li>SFTP</li>
+<li>FTP</li>
+<li>DVD/CD Sharing</li>
+</ul>
+</li>
+<li>Two primary connection methods<ol>
+<li><code>Finder -&gt; Go -&gt; Connect to Server</code><ul>
+<li>Mounts shared so it remains accessible</li>
+<li>Mounts to the /Volumes folder</li>
+<li>Useful for persistent connections</li>
+</ul>
+</li>
+<li><code>Finder -&gt; Sidebar -&gt; Shared</code><ul>
+<li>Temporarily connects to a share</li>
+<li>Useful for one-off access</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>AppleShare<ul>
+<li>Apple File Protocol (AFP)</li>
+<li>afp://computer/folder</li>
+<li>Current version of AFP is 3.4 introduced in 10.8</li>
+<li>Versions prior to 3.1 can cause issues as they don&#39;t support newer features</li>
+<li>3.1 was introduced in 10.2</li>
+<li>File forks<ul>
+<li>Basis for Time Machine</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Service Discovery Protocols<ul>
+<li>Detects services on the network (LAN and WAN)<ul>
+<li>File Shares</li>
+<li>Printers</li>
+<li>Messages Clients</li>
+<li>iTunes</li>
+<li>OS X Server</li>
+<li>Many more</li>
+</ul>
+</li>
+<li>Bonjour</li>
+<li>Automatic discovery of systems on the network</li>
+<li>Zero configuration</li>
+<li>Leverages IPv6 Link Local addresses</li>
+<li>Leverages Multicast DNS (mDNS) for name lookups<ul>
+<li>Requests are sent to a multicast address</li>
+</ul>
+</li>
+<li>Name format<ul>
+<li>DonsMacbookPro.local</li>
+<li>DonsMacbookPro-2.local</li>
+<li>DonsMacbookPro-3.local</li>
+</ul>
+</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/NetServices/Articles/about.html">More on Bonjour</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="external-resources-">External Resources:</h3>
+<p>During this episode, you can reference the following external resources for supplementary tools and information:</p>
+<ul>
+<li>[1]:<a href="https://www.apple.com/remotedesktop/">https://www.apple.com/remotedesktop/</a></li>
+</ul>
+</body></html>

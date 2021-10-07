@@ -1,0 +1,85 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="storage-hardware">Storage Hardware</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the storage hardware supported by macOS. </li>
+<li>List the hardware detected by macOS. </li>
+<li>Locate the mount points automatically created by macOS. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Internal media is always present<ul>
+<li>HDD</li>
+<li>SSD</li>
+<li>Will typically use Apple proprietary file systems</li>
+</ul>
+</li>
+<li>Removable media is transient<ul>
+<li>CD</li>
+<li>DVD</li>
+<li>USB</li>
+<li>Thunderbolt</li>
+<li>Fire Wire</li>
+<li>Will typically use non-proprietary file systems for compatibility</li>
+</ul>
+</li>
+<li>System Information<ul>
+<li><code>Macintosh HD -&gt; Applications -&gt; Utilities -&gt; System Information</code></li>
+<li>Under <code>Hardware</code> you will find: <ul>
+<li>SAS</li>
+<li>SATA/SATA Express</li>
+<li>Storage (Shows logical volumes/partitions)</li>
+<li>Thunderbolt</li>
+<li>USB</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Disk Utility<ul>
+<li><code>Macintosh HD -&gt; Applications -&gt; Utilities -&gt; Disk Utility</code></li>
+</ul>
+</li>
+<li><em>Hard Disks</em><ul>
+<li>Physical disks</li>
+</ul>
+</li>
+<li><em>Partitions</em><ul>
+<li>Logical boundaries created on the physical disk</li>
+<li>A disk must contain at least 1 partition to be used by the system</li>
+<li>macOS supports up to 16 partitions per disk</li>
+</ul>
+</li>
+<li><em>Volumes</em><ul>
+<li>A partition that has been formatted for use by the system</li>
+<li>A partition is not visible to the user until it is formatted into a volume</li>
+<li>macOS mounts volumes to <code>/Volumes</code> by default</li>
+</ul>
+</li>
+<li>GUID<ul>
+<li>Globally Unique Identifiers</li>
+<li>GUID Partition Table (GPT)</li>
+<li>Default partition scheme for modern Macs</li>
+<li>Supported by Windows and Linux also</li>
+</ul>
+</li>
+<li>APM<ul>
+<li>Apple Partition Map</li>
+<li>Legacy partition map scheme</li>
+<li>Used on PPC-based Macs</li>
+</ul>
+</li>
+<li>MBR <ul>
+<li>Master Boot Record</li>
+<li>Legacy partition map scheme</li>
+<li>Most widely supported</li>
+</ul>
+</li>
+<li>NOTE: System disks under macOS Mojave need to be GPT</li>
+</ul>
+</body></html>

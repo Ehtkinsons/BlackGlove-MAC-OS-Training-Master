@@ -1,0 +1,53 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="configuring-printers">Configuring Printers</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the Common Unix Printing System (CUPS).</li>
+<li>Install a printer in macOS and verify functionality.</li>
+<li>Share a printer on the network to make it available to other machines. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Printers can be added by two methods<ol>
+<li>Manually connecting the printer and installing drivers (if required)</li>
+<li>Automatically discovering the printer</li>
+</ol>
+</li>
+<li>Common Unix Printing System (CUPS)<ul>
+<li>The foundation of printing in most Unix-based OSes</li>
+<li>Owned by Apple, but an open-source project</li>
+<li>Uses PPD files for printer drivers<ul>
+<li>PostScript Printer Description (PPD)</li>
+<li>Apple provides native drivers for many printers<ul>
+<li><code>/System/Library/Printers</code></li>
+</ul>
+</li>
+<li>Most vendors provide PPD files for their printers as it enables both MacOS as well as Linux<pre><code>- `/Library/Printers`
+</code></pre></li>
+</ul>
+</li>
+<li>When printing, your document is pre-processed and stored in <code>/var/spool/cups</code></li>
+<li>The spool folder is protected to ensure users cannot access each other&#39;s print jobs</li>
+</ul>
+</li>
+<li>A printer on your machine can be shared to other systems on the network<ol>
+<li><code>System Preferences -&gt; Printers &amp; Scanners</code></li>
+<li>Select the printer</li>
+<li>Select <em>Share this printer on the network</em></li>
+</ol>
+</li>
+<li>Printer Preferences<ol>
+<li><code>System Preferences -&gt; Sharing</code></li>
+<li>Select <em>Printer Sharing</em></li>
+<li>Select the printer</li>
+<li>Assign desired permissions</li>
+</ol>
+</li>
+</ul>
+</body></html>

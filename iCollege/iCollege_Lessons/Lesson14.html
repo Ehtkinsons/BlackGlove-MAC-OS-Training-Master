@@ -1,0 +1,84 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="file-system-maintenance">File System Maintenance</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe techniques you can use to prevent file system corruption.</li>
+<li>Properly prepare a disk for safe removal from a system.</li>
+<li>Use the Disk Utility to repair damage caused by improper drive removal.</li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Maintenance Tasks<ul>
+<li>Reactive<ul>
+<li>Error is detected</li>
+<li>Must be corrected</li>
+</ul>
+</li>
+<li>Proactive<ul>
+<li>Preventative maintenance</li>
+<li>Performed to prevent an error</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proper ejecting<ol>
+<li>Drag the disk icon to the Trash</li>
+<li>Click the eject icon next to the disk in the finder navigation tree</li>
+<li>Highlight the disk in Finder and click <code>File -&gt; Eject</code></li>
+</ol>
+</li>
+<li>Force ejecting<ul>
+<li>Disks should be properly unmounted before being removed</li>
+<li>Failing to do so can result in corrupted files</li>
+<li>Especially with FAT32/ExFAT disks</li>
+<li>Sometimes a disk is &quot;stuck&quot;</li>
+<li>Normally the result of an open application</li>
+<li>If so, you have a few options:<ol>
+<li>Logout and log back in again, then try to eject. </li>
+<li>Shutdown and unplug the disk.</li>
+<li>Unmount the disk using the Disk Utility</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Identifying rogue disk access<ul>
+<li>Not easily</li>
+<li>Spindump will list all processes and their related disk activity<ol>
+<li>Launch Activity Monitor</li>
+<li><code>Gear -&gt; Spindump</code></li>
+</ol>
+</li>
+<li>You may also find information in the Console logs</li>
+</ul>
+</li>
+<li>Disk Utility can help if disk corruption occurs<ul>
+<li>Not fool-proof</li>
+<li><code>Disk Utility -&gt; Select Disk -&gt; First Aid</code><ol>
+<li>Verify Disk</li>
+<li>Repair Disk</li>
+<li>Fix Permissions</li>
+</ol>
+</li>
+<li>Use Recovery if it is the system disk</li>
+</ul>
+</li>
+<li>Target Mode<ul>
+<li>Allows turning your Mac into an external disk</li>
+<li>Attach it to another Mac, as if it were a peripheral</li>
+<li>Steps<ol>
+<li>Shutdown Mac</li>
+<li>Boot while holding &quot;T&quot; </li>
+<li>Connect to another Mac using Thunderbolt or Fire Wire</li>
+</ol>
+</li>
+<li>Once connected, you can use Disk Utility on the second Mac.</li>
+</ul>
+</li>
+</ul>
+</body></html>

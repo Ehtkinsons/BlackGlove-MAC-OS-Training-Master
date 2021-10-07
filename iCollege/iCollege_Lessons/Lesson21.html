@@ -1,0 +1,61 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="aliases-and-links">Aliases and Links</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Create and modify file system aliases in macOS. </li>
+<li>Describe and create UNIX-style hard links and symbolic links. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Aliases<ul>
+<li>Aliases are pointers that indicate the location of a file</li>
+<li>Consume less space than a second copy of the file<ul>
+<li>Links are around 300Kb</li>
+<li>Can be larger than a text document</li>
+</ul>
+</li>
+<li>Created by:<ul>
+<li><code>Option-Click</code> on a file and choose <code>Make Alias</code></li>
+<li><code>Command-L</code></li>
+</ul>
+</li>
+<li>DEMO: Creating an alias</li>
+<li>Will continue to point to the original even if it has been renamed or moved.</li>
+<li>Aliases are not recognized by the file system</li>
+<li>DEMO: Moving the source file</li>
+</ul>
+</li>
+<li>UNIX-style Links<ul>
+<li>The BSD Unix system has native support for links</li>
+<li>Mac GUI will follow them, but not create them</li>
+<li>Two types<ol>
+<li>Symbolic Links</li>
+<li>Hard Links</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Symbolic Links<ul>
+<li>Filesystem pointer to another file</li>
+<li>Does not track the file</li>
+<li>Moving the original breaks the symlink</li>
+<li><code>ln -s &lt;target&gt; &lt;link&gt;</code></li>
+<li><code>ln -s /Volumes/USB\ HD /Users/donpezet/Documents/USB\ HD</code></li>
+</ul>
+</li>
+<li>Hard Links<ul>
+<li>An additional filesystem entry that points to existing data</li>
+<li>Will survive the original being renamed/moved</li>
+<li>Not typically used with directories</li>
+<li><code>ln &lt;target&gt; &lt;link&gt;</code></li>
+<li><code>ln ~/Documents/file.txt ~/Desktop/file.txt</code></li>
+</ul>
+</li>
+</ul>
+</body></html>

@@ -1,0 +1,104 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="file-systems">File Systems</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the file systems available in macOS including APFS, Mac OS Extended, exFAT and NTFS. </li>
+<li>Differentiate between the file systems and identify their benefits and drawbacks. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Apple File System (APFS)<ul>
+<li>Introduced in macOS High Sierra</li>
+<li>Designed for all Apple platforms (iOS, macOS, tvOS and watchOS)</li>
+<li>Better encryption<ul>
+<li>Single key and multi-key</li>
+</ul>
+</li>
+<li>Supports more files and larger partitions</li>
+<li>Case sensitive</li>
+<li>Initially only supported on SSD<ul>
+<li>Now supported on Fusion as well</li>
+<li>Not supported on spinning disk (HDD)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mac OS Extended<ul>
+<li>Most basic Apple format</li>
+<li>Unicode filenames</li>
+<li>File permissions</li>
+<li>Links and aliases</li>
+</ul>
+</li>
+<li>Mac OS Extended (Journaled)<ul>
+<li>Same as above, but with journaling support</li>
+<li>Journaling protects from unexpected failures<ul>
+<li>Power outage</li>
+<li>Improper drive removal</li>
+</ul>
+</li>
+<li>Write operations are committed to a protected area</li>
+<li>Writes are not committed until they are 100% received</li>
+<li>Write failure results in a roll-back of the change</li>
+<li>Leaves the original file intact </li>
+</ul>
+</li>
+<li>Mac OS Extended (Journaled, Case-Sensitive)<ul>
+<li>Same as above, but obeys UNIX/POSIX case rules</li>
+<li>These are different files: <ul>
+<li><code>/Users/dpezet/Documents/FileName.txt</code></li>
+<li><code>/Users/dpezet/Documents/filename.txt</code></li>
+<li><code>/Users/dpezet/Documents/FILENAME.txt</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mac OS Extended (Journaled, Encrypted)<ul>
+<li>Same as above, but with full disk encryption applied</li>
+<li>FileVault</li>
+</ul>
+</li>
+<li>FAT32<ul>
+<li>File Allocation Table (32-bit)</li>
+<li>Developed for DOS/Windows systems</li>
+<li>Considered the most compatible file system for removable media</li>
+<li>Not supported for boot volumes under macOS</li>
+<li>Very fragile with improper removal</li>
+</ul>
+</li>
+<li>NTFS<ul>
+<li>New Technology File System</li>
+<li>Developed for Windows NT systems<ul>
+<li>Windows XP, Vista, 7, 8, 10</li>
+</ul>
+</li>
+<li>Microsoft Proprietary</li>
+<li>macOS can read NTFS, but not write</li>
+</ul>
+</li>
+<li>ExFAT<ul>
+<li>Extended File Allocation Table</li>
+<li>Replacement for FAT32</li>
+<li>Large disk support</li>
+<li>High degree of compatibility</li>
+<li>Useful for removable disks that go between Macs and PCs</li>
+<li>Fragile with improper removal</li>
+<li>Supported in macOS since v10.6</li>
+</ul>
+</li>
+<li>UFS<ul>
+<li>UNIX File System</li>
+<li>Supported up through v10.5</li>
+<li>Could still be read by v10.13</li>
+<li>Support removed</li>
+<li>DiskUtility cannot format UFS anymore</li>
+</ul>
+</li>
+</ul>
+</body></html>

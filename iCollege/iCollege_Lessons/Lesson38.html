@@ -1,0 +1,136 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="the-macos-boot-process">The macOS Boot Process</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the five phases of the macOS boot process.</li>
+<li>Select the appropriate troubleshooting method based on the phase where a system stops responding properly. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>macOS Boot Phases<ol>
+<li>Firmware</li>
+<li>Booter<ul>
+<li>File Vault</li>
+</ul>
+</li>
+<li>Kernel</li>
+<li>System <em>launchd</em></li>
+<li>Login</li>
+</ol>
+</li>
+<li>STEP 1: <strong>Firmware</strong> (BootROM)<ul>
+<li>Stored in hardware</li>
+<li>Power On Self Test (POST)</li>
+<li>Extensible Firmware Interface (EFI)</li>
+<li>Mac chime plays</li>
+<li>Power light flashes</li>
+<li>Appears as an Apple logo on the screen</li>
+<li>If everything passes, moves on to boot selection</li>
+<li>Allows the user to select which drive to boot</li>
+<li>Uses <em>Startup Disk</em> system preference by  default</li>
+<li>If FileVault is enabled, it boots from Recovery to unlock the disk</li>
+<li>Executes the Booter</li>
+<li>Troubleshooting<ul>
+<li>Audible beep codes</li>
+<li>Power light flashing patterns</li>
+<li>Apple Hardware Diagnostics<ul>
+<li>Hold <strong>D</strong> while booting to access diagnostics</li>
+</ul>
+</li>
+<li>Generally hardware issues requiring maintenance</li>
+<li>If no booter is found, a folder with a &quot;?&quot; is  displayed</li>
+<li>Startup disk could be incorrectly set<ul>
+<li><code>System Preferences -&gt; Startup Disk</code></li>
+<li>Can be set from Recovery also</li>
+</ul>
+</li>
+<li>Boot to recovery and use Disk Utility to  repair the disk</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>STEP 2: <strong>Booter</strong><ul>
+<li><code>/System/Library/CoreServices/boot.efi</code></li>
+<li>Loads the kernel and initial extensions</li>
+<li>Basic extensions are cached by default</li>
+<li>Booting in safe mode flushes the cache</li>
+<li>Appears as a spinning wheel on the screen</li>
+<li>When booting from Internet Recovery it displays as a globe</li>
+<li>Turns over control to Kernel</li>
+<li>Troubleshooting<ul>
+<li>Attempt Safe Boot to flush the KEXT cache</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>STEP 3: <strong>Kernel</strong><ul>
+<li>Loads additional extensions as necessary</li>
+<li>Starts underlying core (BSD)</li>
+<li>Executes <em>launchd</em></li>
+<li>Troubleshooting<ul>
+<li>Attempt Safe Boot to flush the KEXT cache</li>
+<li>Boot in verbose mode to see where the boot process halts</li>
+<li>Use target mode to remove newly added extensions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>STEP 4: <strong>System</strong> <em>launchd</em><ul>
+<li><code>/sbin/launchd</code></li>
+<li>Process ID #1</li>
+<li>Executes remaining system processes<ul>
+<li><code>/System/Library/LaunchDaemons</code></li>
+<li><code>/Library/LaunchDaemons</code></li>
+<li><code>/System/Library/StartupItems</code></li>
+<li><code>/Library/StartupItems</code></li>
+</ul>
+</li>
+<li>Displays login window</li>
+<li><em>loginwindow</em> process is owned by root at this stage</li>
+<li>Troubleshooting<ul>
+<li>Boot into Safe Mode</li>
+<li>Clear out caches in /Library/Caches</li>
+<li>Clear out preferences<pre><code>  -<span class="ruby"> <span class="hljs-string">`/Library/Preferences`</span>
+</span>  -<span class="ruby"> <span class="hljs-string">`/Library/Preferences/SystemConfiguration`</span></span>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>STEP 5: <strong>Login</strong><ul>
+<li><em>loginwindow</em> process prompts for credentials</li>
+<li>User provides credentials</li>
+<li><em>loginwindow</em> transitions to the user&#39;s credentials</li>
+<li><em>launchd</em> is executed on behalf of the user</li>
+<li>Builds user interface</li>
+<li>Executes launch agents<ul>
+<li><code>/System/Library/LaunchAgents</code></li>
+<li><code>/Library/LaunchAgents</code></li>
+<li><code>/Users/username/Library/LaunchAgents</code></li>
+</ul>
+</li>
+<li>Finally, executes <em>Login Items</em><ul>
+<li><code>System Preferences -&gt; Users &amp; Groups -&gt; Select User -&gt; Login Items</code></li>
+</ul>
+</li>
+<li>Troubleshooting<ul>
+<li>Perform <em>Safe Mode</em> login<ul>
+<li>Hold <strong>Shift</strong> while logging in</li>
+</ul>
+</li>
+<li>Check/Remove Launch Agents and login items<ul>
+<li><code>/Users/username/Library/Preferences/loginwindow.plist</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

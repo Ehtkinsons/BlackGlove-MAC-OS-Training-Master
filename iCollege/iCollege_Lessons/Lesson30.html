@@ -1,0 +1,122 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="configuring-ethernet-adapters">Configuring Ethernet Adapters</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Manually configure a network adapter in macOS.</li>
+<li>Configure and verify Dynamic Host Configuration Protocol (DHCP).</li>
+<li>Configure and verify a Domain Name System (DNS) Server.</li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Obtaining an address<ul>
+<li>IPv4<ul>
+<li>Static IP</li>
+<li>DHCP</li>
+</ul>
+</li>
+<li>IPv6<ul>
+<li>Static IP</li>
+<li>Link-local IP</li>
+<li>Stateless Auto-configuration</li>
+<li>DHCPv6</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It varies based on local vs remote systems </li>
+<li>Local Communication<ol>
+<li>DNS is used to resolve the IP of the destination</li>
+<li>The IP is compared against our address/subnet mask and determined to be on the same network</li>
+<li>An Address Resolution Protocol (ARP) broadcast is sent out to locate the destination system</li>
+<li>The ARP response teaches us the MAC address associated with the destination IP</li>
+<li>We then communicate with the destination using the MAC address</li>
+</ol>
+</li>
+<li>Remote Communication<ol>
+<li>DNS is used to resolve the IP of the destination</li>
+<li>The IP is compared against our address/subnet mask and determined to be on a different network</li>
+<li>An Address Resolution Protocol (ARP) broadcast is sent out to locate the router</li>
+<li>The ARP response teaches us the MAC address associated with the router</li>
+<li>We then communicate with the router using its MAC combined with the IP address of the destination system</li>
+<li>The router receives the data and recognizes that the router is not the final destination</li>
+<li>The router forwards the traffic along to the next router in line</li>
+</ol>
+</li>
+<li>Domain Name System<ul>
+<li>Resolves a name to an IP</li>
+<li>Example #1: www.apple.com = 23.78.138.214</li>
+<li>Example #2: www.apple.com = 2600:1402:14:197::c77</li>
+<li><code>nslookup www.apple.com</code></li>
+<li><code>dig www.apple.com</code></li>
+</ul>
+</li>
+<li>Three primary components<ol>
+<li>Service<ul>
+<li>Network software that supports communications</li>
+<li>DHCP, DNS, Web Server, etc.</li>
+</ul>
+</li>
+<li>Interface<ul>
+<li>Physical network connection</li>
+<li>Ethernet, Wi-Fi, etc</li>
+</ul>
+</li>
+<li>Protocol<ul>
+<li>Logical network connection</li>
+<li>TCP/IP</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Basic Steps<ol>
+<li><code>Apple Menu -&gt; System Preferences -&gt; Network</code></li>
+<li>Select appropriate interface</li>
+<li>Assign address, or select DHCP</li>
+<li>Select <code>Apply</code></li>
+</ol>
+</li>
+<li>Advanced configurations<ul>
+<li>Most adapters have an <em>Advanced</em> button</li>
+<li>Used to assign less common settings</li>
+<li>TCP/IP<ul>
+<li>DHCP Client ID</li>
+<li>IPv6</li>
+</ul>
+</li>
+<li>DNS<ul>
+<li>Additional DNS Servers</li>
+<li>Search Domains</li>
+</ul>
+</li>
+<li>WINS<ul>
+<li>WINS servers</li>
+<li>Workgroup Name</li>
+</ul>
+</li>
+<li>802.1x<ul>
+<li>Enable Automatic Configuration</li>
+<li>Select a profile</li>
+</ul>
+</li>
+<li>Proxies<ul>
+<li>Assign various proxies</li>
+<li>Define addresses that bypass the proxy</li>
+</ul>
+</li>
+<li>Hardware<ul>
+<li>MAC address</li>
+<li>Speed</li>
+<li>Duplex</li>
+<li>MTU</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

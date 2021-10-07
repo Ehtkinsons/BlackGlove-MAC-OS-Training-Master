@@ -1,0 +1,101 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="customizing-permissions">Customizing Permissions</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe how file permissions are maintained in macOS. </li>
+<li>Define the standard POSIX permissions used in UNIX-based operating systems.</li>
+<li>Configure access control lists to restrict access to folders and files. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Files and folders are assigned permissions to control user access</li>
+<li>Allows multiple users to store data on the same drive safely and securely</li>
+<li>Permissions are managed in three methods: <ol>
+<li>Owner<ul>
+<li>The person who created the file</li>
+<li>Has complete access to the file by default</li>
+<li>Can be changed to another user</li>
+<li>Defaults to <em>Read &amp; Write</em></li>
+</ul>
+</li>
+<li>Group<ul>
+<li>A collection of users granted access to the file based on their membership in a group</li>
+<li>In Mac OS all users are added to a group named &quot;staff&quot; by default so you see will it most often</li>
+<li>Defaults to <em>Read Only</em></li>
+</ul>
+</li>
+<li>Everyone (Other)<ul>
+<li>The permissions apply to everyone else</li>
+<li>Any user who does not fit in #1 or #2</li>
+<li>Guest</li>
+<li>Sharing Users</li>
+<li>Defaults to <em>Read Only</em></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Permissions can be accessed in the finder by: <ul>
+<li><code>Command-I -&gt; Sharing &amp; Permissions</code></li>
+<li>Allows viewing and changing the permissions</li>
+</ul>
+</li>
+<li>Permission Inheritance<ul>
+<li>Folder permissions apply to child objects by default</li>
+<li>Can be overridden if desired</li>
+</ul>
+</li>
+<li>Permission Definitions<ul>
+<li>Read &amp; Write<ul>
+<li>Applies to files and folders</li>
+<li>Allows reading of any content in a file/folder</li>
+<li>When applied to a folder, indicates the folder contents can be listed, and new items can be created</li>
+<li>When applied to a file, indicates data may be appended</li>
+</ul>
+</li>
+<li>Read Only<ul>
+<li>Applies to files and folders</li>
+<li>Allows reading of any content in a file/folder</li>
+<li>when applied to a folder, indicates the folder contents can be listed            </li>
+</ul>
+</li>
+<li>Write Only<ul>
+<li>Applies only to folders</li>
+<li>Used for <em>drop boxes</em></li>
+<li>A drop box is a folder someone can add contents to, but cannot retrieve those same contents later on. </li>
+<li>Read permissions are not granted</li>
+</ul>
+</li>
+<li>No Access<ul>
+<li>Applies to files and folders</li>
+<li>Indicates permission denied</li>
+<li>Cannot read, write or list contents</li>
+</ul>
+</li>
+<li>Execute<ul>
+<li>Applies only to files</li>
+<li>Not visible in the GUI</li>
+<li>Indicates that a user may &quot;execute&quot; an application or script</li>
+<li>Mainly used for applications launched from the terminal</li>
+<li>Native macOS applications are managed by the OS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Access Control Lists<ul>
+<li>Normal permissions are limited to User, Group and Other (Everyone)</li>
+<li>ACLs allow adding permissions beyond the standard Unix UGO method</li>
+<li>Can add multiple users and groups</li>
+<li>From the GUI<ul>
+<li>Use the +/- buttons to add and remove users and groups to the list</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

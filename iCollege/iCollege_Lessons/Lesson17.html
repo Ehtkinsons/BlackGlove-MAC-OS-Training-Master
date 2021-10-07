@@ -1,0 +1,117 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="default-file-permissions">Default File Permissions</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the default file permissions created automatically by macOS. </li>
+<li>Describe the function and purpose of the &quot;Shared&quot; folder in a user&#39;s home directory.</li>
+<li>Repair damaged permissions using the Disk Utility. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Home Folder Structure<ul>
+<li>Read access is granted to parts of a user&#39;s home
+folder by default</li>
+<li>Designed to facilitate sharing data</li>
+<li>Users should be aware of the default settings</li>
+<li>[Default Home Folder Permissions][]</li>
+<li>Permissions of note:<ul>
+<li>Everyone has <em>read</em> permissions to a user&#39;s home
+folder (including guest)</li>
+<li>Everyone has <em>read</em> permissions on the Public folder</li>
+<li>Everyone has <em>write</em> permissions on the Drop Box
+folder, but not <em>read</em> permissions</li>
+<li>All other folders are secured to the user</li>
+<li>It is important that private documents not be
+stored in the users root home folder</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The Shared folder<ul>
+<li>A default &quot;Shared&quot; folder is provided to allow users
+to exchange data</li>
+<li>/Users/Shared</li>
+<li>All users have read/write permissions on the folder</li>
+<li>However, special permissions are applied that prevent
+one user from deleting another user&#39;s data</li>
+<li>Special permission is referred to as the <em>Sticky Bit</em><ul>
+<li>Special directory flag</li>
+<li>Indicates files in a directory can only be renamed or
+deleted by the file owner, or root</li>
+<li>Used in shared folders with multiple user&#39;s data</li>
+<li>Each user can copy their own data in</li>
+<li>Each user can read everyone else&#39;s data</li>
+<li>Each user can only delete/rename their own data</li>
+<li>e.g. /tmp</li>
+<li>Terminal Commands<ul>
+<li><code>chmod -R +t &lt;directory&gt;</code></li>
+<li><code>ls -l &lt;directory&gt;</code></li>
+</ul>
+</li>
+<li>Example without sticky bit:<ul>
+<li><code>drwxr-xr-x  2 donpezet  staff  68 Feb 15 21:00 temp</code></li>
+</ul>
+</li>
+<li>Example with sticky bit:<ul>
+<li><code>drwxr-xr-t  2 donpezet  staff  68 Feb 15 21:00 temp</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Repairing Permissions<ul>
+<li>File and Folder permissions can become damaged<ul>
+<li>Improper user actions</li>
+<li>Target mode</li>
+<li>Backup/Restore</li>
+<li>Malicious software</li>
+</ul>
+</li>
+<li>Permissions can easily be repaired</li>
+<li>Disk Utility<ul>
+<li>Disk Utility can be used to scan the entire disk and repair permissions wherever they deviate from Apple&#39;s best practices</li>
+<li><code>Disk Utility -&gt; Select Volume -&gt; First Aid</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removable Media<ul>
+<li>USB sticks, thunderbolt hard drives, etc</li>
+<li>Move from computer to computer</li>
+<li>Makes tracking an owner very difficult</li>
+<li>Owner may not exist on other systems</li>
+<li>UID of owner may be assigned to another account</li>
+<li>As a result, permissions are not terribly useful on 
+removable media</li>
+<li>Apple disables ownership on removable and non-system
+internal disks by default</li>
+<li>Can be changed<ol>
+<li>Select the removable disk</li>
+<li><code>Command-I</code></li>
+<li>Check/Uncheck &quot;Ignore ownership on this volume&quot;</li>
+</ol>
+</li>
+<li>Effectively kills permissions on the disk</li>
+<li>Allows all users access to the media</li>
+</ul>
+</li>
+</ul>
+<h4 id="default-home-folder-permissions">Default Home Folder Permissions</h4>
+<pre><code>rwxr-xr-x    <span class="hljs-regexp">/Users/</span>donpezet
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Desktop
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Documents
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Downloads
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Library
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Movies
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Music
+rwxr-----    <span class="hljs-regexp">/Users/</span>donpezet/Pictures
+rwxr-xr-x    <span class="hljs-regexp">/Users/</span>donpezet/Public
+rwx-wx-wx    <span class="hljs-regexp">/Users/</span>donpezet<span class="hljs-regexp">/Public/</span>Drop Box
+</code></pre></body></html>

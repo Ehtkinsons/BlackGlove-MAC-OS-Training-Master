@@ -1,0 +1,72 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="application-security">Application Security</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe macOS security features including gatekeeper, application sandboxes, and digital signatures.</li>
+<li>Describe and configure macOS privacy controls. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Application Security<ul>
+<li>Digitally Signed</li>
+<li>64-bit</li>
+<li>Bundles<ul>
+<li>Bundles can contain anything</li>
+<li>Related files grouped together into a single file</li>
+<li><code>*.app</code></li>
+<li>Can easily be copied into <code>/Applications</code> eliminating the need for an installer</li>
+<li><code>app</code> files are really just folders with an icon</li>
+<li><code>Ctrl-Click -&gt; Show Package Contents</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GateKeeper<ul>
+<li>Restricts which apps are allowed to run</li>
+<li><code>System Preferences -&gt; Security &amp; Privacy -&gt; General</code><ul>
+<li>App Store</li>
+<li>App Store and identified developers</li>
+</ul>
+</li>
+<li>Can be overridden by an administrator<ul>
+<li>Control-Click -&gt; Open</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Application Sandboxing<ul>
+<li>Protected memory<ul>
+<li>A sandboxed application has a protected memory space</li>
+<li>No other application is allowed to access that space</li>
+<li>Ensures one application cannot crash another</li>
+</ul>
+</li>
+<li>Preferences / Application Support isolation<ul>
+<li>Files associated with the application are removed from the common locations to isolated locations on the drive</li>
+<li>Old - <code>/Users/username/Library/Preferences</code></li>
+<li>New - <code>/Users/username/Library/Containers/&lt;application&gt;/Data/Library/Preferences</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Privacy Controls<ul>
+<li><code>Apple Menu</code> -&gt; <code>System Preferences</code> -&gt; <code>Security &amp; Privacy</code> -&gt; <code>Privacy</code></li>
+<li>Enable/Disable Location Services</li>
+<li>Control which apps can access contacts, calendars, and reminders</li>
+<li>Enable accessibility access for apps</li>
+</ul>
+</li>
+<li>System Information<ul>
+<li><code>/Applications/Utility/System Information</code></li>
+<li>Displays data regarding your system</li>
+<li><em>Software</em> section details all installed software</li>
+</ul>
+</li>
+</ul>
+</body></html>

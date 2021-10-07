@@ -1,0 +1,73 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="application-preferences">Application Preferences</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the various locations macOS applications can store data. </li>
+<li>Describe the format and function of an Apple plist preference file.</li>
+<li>Change the default application used when launching a file. </li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Application Binaries<ul>
+<li>Stored in multiple places<ul>
+<li><code>/Applications</code></li>
+<li><code>/Users/username/Applications</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Application Files<ul>
+<li><code>/Users/username/Documents</code></li>
+</ul>
+</li>
+<li>Application Preferences<ul>
+<li>Stored in multiple places<ul>
+<li><code>/Library/Preferences</code></li>
+<li><code>/Users/username/Library/Preferences</code></li>
+<li><code>/Library/Application Support</code></li>
+<li><code>/Users/username/Library/Application Support</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Preference Files<ul>
+<li>Stored in <code>*.plist</code> files</li>
+<li><code>plutil -convert xml1 &lt;file&gt;</code></li>
+<li><code>plutil -convert binary1 &lt;file&gt;</code></li>
+</ul>
+</li>
+<li>File Locking<ul>
+<li>Prevents modification by users</li>
+<li><code>Command-I -&gt; General -&gt; Locked</code></li>
+<li><code>sudo chflags nouchg &lt;file&gt;</code></li>
+</ul>
+</li>
+<li>Launch Services<ul>
+<li>macOS tracks which programs can open a file type</li>
+<li>Referred to as <em>Launch Services</em></li>
+<li>Stored in: <ul>
+<li><code>/Library/Preferences/com.apple.LaunchServices.plist</code></li>
+<li><code>/Users/username/Library/Preferences/com.apple.LaunchServices.plist</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Changing the default application for an extension<ul>
+<li>One time<ul>
+<li><code>Control-Click -&gt; Open With</code></li>
+</ul>
+</li>
+<li>Permanently<ul>
+<li><code>Control-Click -&gt; Get Info</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>

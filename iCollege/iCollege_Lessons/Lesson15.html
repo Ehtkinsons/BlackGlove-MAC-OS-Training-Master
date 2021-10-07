@@ -1,0 +1,62 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="filevault-disk-encryption">FileVault Disk Encryption</h2>
+<h3 id="objectives-">Objectives:</h3>
+<p>At the end of this episode, I will be able to:</p>
+<ol>
+<li>Describe the purpose and function of Apple FileVault</li>
+<li>Differentiate between FileVault v1 and v2</li>
+<li>Encrypt a computer running macOS using Apple FileVault</li>
+</ol>
+<blockquote>
+<p>Additional resources used during the episode can be obtained using the download link on the overview episode.</p>
+</blockquote>
+<hr>
+<hr>
+<ul>
+<li>Security Limitations<ul>
+<li>Most security measures can be bypassed<ul>
+<li>User password can be reset from recovery</li>
+<li>Firmware password can be bypassed by removing the disk</li>
+</ul>
+</li>
+<li>Encrypting your data mitigates most of those scenarios<ul>
+<li>Exception would be post-login attacks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>FileVault<ul>
+<li>Allows encryption of the entire disk</li>
+<li>Current version is FileVault v2</li>
+<li>&quot;Legacy FileVault&quot; is v1</li>
+<li>Legacy FileVault only encrypted your home folder</li>
+<li>Legacy FileVault maintained a &quot;Master Password&quot; to allow for emergency description</li>
+<li><code>Apple Menu</code> -&gt; <code>System Preferences</code> -&gt; <code>Security &amp; Privacy</code> -&gt; <code>Legacy FileVault</code></li>
+<li>Apple recommends decrypting your Legacy FileVault and re-encrypting with the new FileVault</li>
+<li>FileVault 2 uses XTS-AES 128 encryption</li>
+<li><a href="https://support.apple.com/en-us/HT204837">Technical Details</a></li>
+</ul>
+</li>
+<li>Firmware Password<ul>
+<li>Booting a Mac to recovery allows for resetting user passwords</li>
+<li>Anyone with physical access could do that</li>
+<li>A firmware password protects from that</li>
+<li>To enable:<ol>
+<li>Boot to recovery</li>
+<li><code>Utilities</code> -&gt; <code>Firmware Password Utility</code></li>
+<li>Set a password</li>
+</ol>
+</li>
+<li>If the firmware password is lost, you will need to take it to an Apple store to be reset</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="external-resources-">External Resources:</h3>
+<p>During this episode, you can reference the following external resources for supplementary tools and information:</p>
+<ul>
+<li><a href="https://support.apple.com/en-us/HT204837">Apple FileVault Technical Details</a></li>
+</ul>
+</body></html>
